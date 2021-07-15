@@ -6,6 +6,8 @@ const {
 } = require('../controllers');
 
 router
-    .get('/', mainController.home);
+    .get('/', mainController.home)
+    .get('/posts', postController.getAll)
+    .get('/categories', categoryController.getAll)
 
 module.exports = router;

@@ -1,3 +1,5 @@
 module.exports = {
-    mainController: require('./mainController')
+    mainController: require('./mainController'),
+    postController: require('./postController'),
+    categoryController: require('./categoryController')
 }
