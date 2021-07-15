@@ -1,0 +1,47 @@
+<svg width="110" height="288" view_box="0 0 110 288" xmlns="http://www.w3.org/2000/svg" xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 15 Jul 2021 04:22:30</desc>
+
+<rect id="frame" x="0" y="0" width="110" height="288" fill="none" stroke="#808080" stroke-width="1" stroke-dasharray="2,2"></rect>
+
+<!-- Association POSSÈDE -->
+<line x1="55" y1="228" x2="55" y2="127" stroke="#726f83" stroke-width="2"></line>
+<text x="60.0" y="169" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<line x1="55" y1="43" x2="55" y2="127" stroke="#726f83" stroke-width="2"></line>
+<text x="60.0" y="94" fill="#726f83" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-POSSÈDE">
+	<path d="M 78 102 a 14 14 90 0 1 14 14 V 127 h -74 V 116 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"></path>
+	<path d="M 92 127.0 v 11 a 14 14 90 0 1 -14 14 H 32 a 14 14 90 0 1 -14 -14 V 127.0 H 74" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"></path>
+	<rect x="18" y="102" width="74" height="50" fill="none" rx="14" stroke="#85956b" stroke-width="2"></rect>
+	<line x1="18" y1="127" x2="92" y2="127" stroke="#85956b" stroke-width="1"></line>
+	<text x="25" y="119.7" fill="#27360c" font-family="Verdana" font-size="12">POSSÈDE</text>
+</g>
+
+<!-- Entity ARTICLES -->
+<g id="entity-ARTICLES">
+	<g id="frame-ARTICLES">
+		<rect x="19" y="177" width="72" height="25" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"></rect>
+		<rect x="19" y="202.0" width="72" height="77" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"></rect>
+		<rect x="19" y="177" width="72" height="102" fill="none" stroke="#578dff" stroke-width="2"></rect>
+		<line x1="19" y1="202" x2="91" y2="202" stroke="#578dff" stroke-width="1"></line>
+	</g>
+	<text x="24" y="194.7" fill="#131114" font-family="Verdana" font-size="12">ARTICLES</text>
+	<text x="24" y="219.7" fill="#3e3c42" font-family="Verdana" font-size="12">slug</text>
+	<line x1="24" y1="222" x2="50" y2="222" stroke="#3e3c42" stroke-width="1"></line>
+	<text x="24" y="236.8" fill="#3e3c42" font-family="Verdana" font-size="12">title</text>
+	<text x="24" y="253.8" fill="#3e3c42" font-family="Verdana" font-size="12">excerpt</text>
+	<text x="24" y="270.8" fill="#3e3c42" font-family="Verdana" font-size="12">content</text>
+</g>
+
+<!-- Entity CATEGORIES -->
+<g id="entity-CATEGORIES">
+	<g id="frame-CATEGORIES">
+		<rect x="9" y="9" width="92" height="25" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"></rect>
+		<rect x="9" y="34.0" width="92" height="43" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"></rect>
+		<rect x="9" y="9" width="92" height="68" fill="none" stroke="#578dff" stroke-width="2"></rect>
+		<line x1="9" y1="34" x2="101" y2="34" stroke="#578dff" stroke-width="1"></line>
+	</g>
+	<text x="14" y="26.7" fill="#131114" font-family="Verdana" font-size="12">CATEGORIES</text>
+	<text x="14" y="51.8" fill="#3e3c42" font-family="Verdana" font-size="12">route</text>
+	<line x1="14" y1="54" x2="47" y2="54" stroke="#3e3c42" stroke-width="1"></line>
+	<text x="14" y="68.8" fill="#3e3c42" font-family="Verdana" font-size="12">label</text>
+</g>
+</svg>
