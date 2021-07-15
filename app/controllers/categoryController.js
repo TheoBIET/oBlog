@@ -9,7 +9,11 @@ const categoryController = {
         }
 
         res.status(200).send({data: categories});
-    }
+    },
+
+    create: async (req, res) => {
+        
+    },
 }
 
 module.exports = categoryController;

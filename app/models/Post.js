@@ -1,21 +1,26 @@
 const CoreModel = require("./CoreModel");
+const pg = require('../database');
 
 class Post extends CoreModel {
+
     static tableName = 'post'
-    slug;
-    title;
-    excerpt;
-    content;
-    category_id;
 
     constructor(data) {
         super(data);
-        this.slug = data.slug;
-        this.title = data.title;
-        this.excerpt = data.excerpt;
-        this.content = data.content;
-        this.category_id = data.category_id;
+        for(const prop in data) {
+            this[prop] = data[prop];
+        }
     }
+
+    static async findAllByCategory(category_id) {
+        try {
+            const data = await pg.query(`SELECT * FROM "${this.tableName}" WHERE category_id=$1`, [category_id]);
+            return data.rows;
+        } catch (error) {
+            console.error('Une erreur s\'est produite');
+        }
+    }
+    
 }
 
 module.exports = Post;

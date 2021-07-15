@@ -30,6 +30,7 @@ class CoreModel {
             console.error('Une erreur s\'est produite');
         }
     }
+    
 }
 
 module.exports = CoreModel;
