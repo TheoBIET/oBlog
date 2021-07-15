@@ -1,6 +1,14 @@
+const {Category} = require('../models');
+
 const categoryController = {
-    home: (_, res) => {
-        res.send('Connection etablished');
+    getAll: async (_, res) => {
+        const categories = await Category.findAll();
+
+        if(!categories) {
+            res.status(404).send('Not Found');
+        }
+
+        res.status(200).send({data: categories});
     }
 }
 

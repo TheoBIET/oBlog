@@ -25,7 +25,7 @@ class CoreModel {
     static async findOne(id) {
         try {
             const data = await pg.query(`SELECT * FROM "${this.tableName}" WHERE id=$1`, [id]);
-            return data.rows;
+            return data.rows[0];
         } catch (error) {
             console.error('Une erreur s\'est produite');
         }

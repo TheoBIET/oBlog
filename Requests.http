@@ -1,3 +1,6 @@
+### API Informations
+GET http://localhost:3000/api
+
 ### API 404
 GET http://localhost:3000/api/randomthings
 
