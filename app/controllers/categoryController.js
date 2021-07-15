@@ -12,7 +12,14 @@ const categoryController = {
     },
 
     create: async (req, res) => {
+        const category = new Category(req.body);
+        const newCategory = await category.insert();
         
+        if(!newCategory) {
+            return res.status(404).send('An erroroccurred while creating during create new category');
+        }
+
+        res.status(200).send({ message: 'Added Successfully', data: newCategory });
     },
 }
 

@@ -30,6 +30,30 @@ class CoreModel {
             console.error('Une erreur s\'est produite');
         }
     }
+
+    async insert() {
+        const tableName = `"${this.constructor.tableName}"`;
+
+        const fieldNames = [];
+        const fieldValues = [];
+        const fieldIndex = [];
+
+        let index = 1;
+        
+        for (const propName in this) {
+            fieldNames.push(`"${propName}"`);
+            fieldValues.push(this[propName]);
+            fieldIndex.push(`$${index++}`);
+        }
+
+        const preparedQuery = {
+            text: `INSERT INTO ${tableName} (${fieldNames.join(', ')}) VALUES(${fieldIndex.join(', ')}) RETURNING *`,
+            values: fieldValues
+        }
+
+        const newItem = await pg.query(preparedQuery)
+        return newItem.rows[0];
+    }
     
 }
 

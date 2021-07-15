@@ -1,0 +1,38 @@
+### API Informations
+GET http://localhost:3000/api
+
+### API 404
+GET http://localhost:3000/api/randomthings
+
+### Récupération de toutes les catégories
+GET http://localhost:3000/api/categories
+
+### Récupération de tous les articles
+GET http://localhost:3000/api/posts
+
+### Récupération d'un article par son ID
+GET http://localhost:3000/api/posts/2
+
+### Récupération des articles d'une catégorie
+GET http://localhost:3000/api/posts/category/3
+
+### Ajout de vocabulaire aux cadavres exquis
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+    "slug": "cadavre-exquis",
+    "title": "Cadavre exquis",
+    "content": "Cadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquis",
+    "excerpt": "Cadavre exquisCadavreCadavre exquisCadavreCadavre exquisCadavre",
+    "category_id": 2
+}
+
+### Ajout de vocabulaire aux cadavres exquis
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+
+{
+    "label": "cadavre-exquis",
+    "route": "/cadavre-exquis"
+}
