@@ -2,16 +2,27 @@
      alt="Lumberjack" width="120" height="120">
 
 # oBlog 🗞 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
 ## Informations 👀
 
-Coming soon..
+oBlog is a simplistic API created as part of an o'Clock Challenge.
+The API has many classic routes such as :
+
+- GET: /api/posts - Returns all available posts.
+- GET: /api/categories - Returns all available categories.
+- GET: /api/posts/2 - Returns the item that matches the parameter ID
+- GET: /api/categories/2 - Returns the category that matches the parameter ID
+- GET: /api/posts/category/2 - Returns all posts belonging to the category with the parametered ID
+- POST : /api/posts - Add a new post, Verify the data with Joi
+- POST : /api/categories - Add a new category, Verify data with Joi
+
+Created in the Model View Controller pattern and Object Oriented Programming. The API data comes from a PostgreQL database versioned with Sqitch. The data sent in a request are validated with Joi.
 
 ## Technologies 💻
 
 -   Express
 -   PostgreSQL
 -   Sqitch
+-   Joi
 
 ## Local Installation 🏗️
 
