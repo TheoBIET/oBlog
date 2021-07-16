@@ -6,7 +6,7 @@ const router = require('./app/router/router');
 
 app.use(express.json());
 
-app.get('/', (_, req) => {
+app.get('/', (_, res, next) => {
     res.redirect('/api');
 });
 
