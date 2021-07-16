@@ -25,7 +25,7 @@ Content-Type: application/json
     "title": "Cadavre exquis",
     "content": "Cadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquisCadavre exquis",
     "excerpt": "Cadavre exquisCadavreCadavre exquisCadavreCadavre exquisCadavre",
-    "category_id": 2
+    "category_id": 3
 }
 
 ### Ajout de vocabulaire aux cadavres exquis

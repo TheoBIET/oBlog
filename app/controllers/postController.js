@@ -30,9 +30,13 @@ const postController = {
         res.status(200).send({ data: posts });
     },
 
-    getOne: async (req, res) => {
+    getOne: async (req, res, next) => {
         const postID = req.params.postID;
         let post = await Post.findOne(postID);
+
+        if(!post) {
+            return next();
+        }
 
         // Attach the category to the post
         post = await attachCategoryToPost(post);
@@ -48,7 +52,7 @@ const postController = {
         const categoryID = req.params.categoryID;
         const posts = await Post.findAllByCategory(categoryID);
 
-        if (!posts || !category) {
+        if (!posts) {
             return res.status(404).send('Not Found');
         }
 
@@ -64,7 +68,7 @@ const postController = {
         const newPost = await post.insert();
         
         if(!newPost) {
-            next();
+            return next();
         }
 
         res.status(200).send({ message: 'Added Successfully', data: newPost });

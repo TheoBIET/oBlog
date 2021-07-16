@@ -5,7 +5,7 @@ const categoryController = {
         const categories = await Category.findAll();
 
         if(!categories) {
-            next();
+            return next();
         }
 
         res.status(200).send({data: categories});
@@ -16,7 +16,7 @@ const categoryController = {
         const newCategory = await category.insert();
         
         if(!newCategory) {
-            next();
+            return next();
         }
 
         res.status(200).send({ message: 'Added Successfully', data: newCategory });
