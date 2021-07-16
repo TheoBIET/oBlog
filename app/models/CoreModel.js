@@ -18,7 +18,7 @@ class CoreModel {
             const data = await pg.query(`SELECT * FROM "${this.tableName}"`);
             return data.rows;
         } catch (error) {
-            console.error('Une erreur s\'est produite');
+            console.error(error);
         }
     }
 
@@ -27,7 +27,7 @@ class CoreModel {
             const data = await pg.query(`SELECT * FROM "${this.tableName}" WHERE id=$1`, [id]);
             return data.rows[0];
         } catch (error) {
-            console.error('Une erreur s\'est produite');
+            console.error(error);
         }
     }
 

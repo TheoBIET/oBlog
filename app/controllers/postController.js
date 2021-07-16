@@ -15,11 +15,11 @@ const attachCategoryToPost = async (post) => {
 }
 
 const postController = {
-    getAll: async (_, res) => {
+    getAll: async (_, res, next) => {
         const posts = await Post.findAll();
 
         if (!posts) {
-            return res.status(404).send('Not Found');
+            return next();
         }
 
         // We want to retrieve the category to which the post is associated
@@ -48,15 +48,15 @@ const postController = {
         res.status(200).send({ data: post });
     },
 
-    getAllByCategory: async (req, res) => {
+    getAllByCategory: async (req, res, next) => {
         const categoryID = req.params.categoryID;
         const posts = await Post.findAllByCategory(categoryID);
 
         if (!posts) {
-            return res.status(404).send('Not Found');
+            return next();
         }
 
-        for (const post of posts) {
+        for (let post of posts) {
             post = await attachCategoryToPost(post);
         }
 

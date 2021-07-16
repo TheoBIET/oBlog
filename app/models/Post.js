@@ -17,7 +17,7 @@ class Post extends CoreModel {
             const data = await pg.query(`SELECT * FROM "${this.tableName}" WHERE category_id=$1`, [category_id]);
             return data.rows;
         } catch (error) {
-            console.error('Une erreur s\'est produite');
+            console.error(error);
         }
     }
     
