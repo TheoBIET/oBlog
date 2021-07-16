@@ -22,6 +22,6 @@ router
     .post('/categories', categoryController.create)
 
     // Error Handler
-    .get('*', mainController.notFound);
+    .use(mainController.notFound);
 
 module.exports = router;

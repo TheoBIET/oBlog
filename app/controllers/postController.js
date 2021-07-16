@@ -59,12 +59,12 @@ const postController = {
         res.status(200).send({ data: posts });
     },
 
-    create: async (req, res) => {
+    create: async (req, res, next) => {
         const post = new Post(req.body);
         const newPost = await post.insert();
         
         if(!newPost) {
-            return res.status(404).send('An erroroccurred while creating during create new post');
+            next();
         }
 
         res.status(200).send({ message: 'Added Successfully', data: newPost });

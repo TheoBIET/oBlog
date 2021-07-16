@@ -6,6 +6,10 @@ const router = require('./app/router/router');
 
 app.use(express.json());
 
+app.get('/', (_, req) => {
+    res.redirect('/api');
+});
+
 app.use('/api', router);
 
 app.listen(port, _ => {
